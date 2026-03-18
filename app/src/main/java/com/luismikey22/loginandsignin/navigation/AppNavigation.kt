@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.luismikey22.loginandsignin.screens.LoginScreen
+import com.luismikey22.loginandsignin.screens.MainScreen
 import com.luismikey22.loginandsignin.screens.SignInScreen
 import com.luismikey22.loginandsignin.screens.WelcomeScreen
 
@@ -15,7 +16,7 @@ fun AppNavigation(){
 
     NavHost(
         navController = navController,
-        startDestination = "welcome"
+        startDestination = "main"
     ){
         composable("welcome"){
             WelcomeScreen(navController)
@@ -25,6 +26,9 @@ fun AppNavigation(){
         }
         composable("signup"){
             SignInScreen(navController)
+        }
+        composable("main"){
+            MainScreen(navController)
         }
     }
 }
